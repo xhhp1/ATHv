@@ -155,6 +155,55 @@
       font-weight:bold;
       margin-top:4px;
     }
+
+    /* =========================================================
+       ✅ ADJUSTMENT: FORCE ALL TEXT (INCLUDING PLACEHOLDERS) WHITE
+       ========================================================= */
+
+    /* Everything text stays white */
+    html, body, .app,
+    h1, h2, h3, h4, h5, h6,
+    p, span, label, small, strong, em,
+    .section, .label, .tabs, .tab-btn,
+    .result-box, #endResult, #entitlementResult5{
+      color:#fff !important;
+    }
+
+    /* Inputs/selects/textarea text white + fix WebKit grey */
+    input, textarea, select, button{
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      caret-color:#fff !important;
+    }
+
+    /* Placeholder white (fix the grey you showed) */
+    ::placeholder{
+      color:#fff !important;
+      opacity:1 !important;
+    }
+    input::placeholder,
+    textarea::placeholder{
+      color:#fff !important;
+      opacity:1 !important;
+    }
+
+    /* Select text white, dropdown options readable */
+    select{ color:#fff !important; }
+    select option{ color:#000 !important; }
+
+    /* Readonly/disabled should NOT turn grey */
+    input:disabled, textarea:disabled, select:disabled,
+    input[readonly], textarea[readonly]{
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+      opacity:1 !important;
+    }
+
+    /* Flatpickr input text fix */
+    .flatpickr-input{
+      color:#fff !important;
+      -webkit-text-fill-color:#fff !important;
+    }
   </style>
 
   <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
